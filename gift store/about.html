@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About & Compare | Saad Store</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <style>
+    .brand-text {
+      color: #FF2E63;
+      font-weight: 700;
+      font-size: 24px;
+    }
+    .nav-link {
+      font-weight: 500;
+      color: #333 !important;
+      transition: color 0.3s;
+    }
+    .nav-link:hover, .nav-link.active {
+      color: #FF2E63 !important;
+    }
+    .nav-icon {
+      font-size: 20px;
+      color: #333;
+      transition: color 0.3s;
+      text-decoration: none;
+    }
+    .nav-icon:hover {
+      color: #FF2E63;
+    }
+    .nav-item.dropdown:hover .dropdown-menu {
+      display: block;
+    }
+    .dropdown-menu {
+      display: none;
+    }
+    .stat-box h3 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #FF2E63;
+}
+
+.stat-box p {
+  font-size: 15px;
+  color: #444;
+}
+
+.team-box {
+  background-color: #fefefe;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+.choose-box {
+  background-color: #fff;
+  padding: 25px;
+  margin: 10px;
+  border-radius: 15px;
+  transition: 0.4s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+.choose-box:hover {
+  background-color: #00eb0c;
+  color: white;
+}
+.choose-box i {
+  color: #FF2E63;
+  transition: 0.3s;
+}
+.choose-box:hover i {
+  color: #fff;
+}
+.testimonials {
+  background-color: #f7f7f7;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.testimonial-heading {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.testimonial-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.testimonial-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+  padding: 25px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.testimonial-card p {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.testimonial-card h5 {
+  color: #FF2E63;
+  font-weight: 600;
+  font-size: 16px;
+}
+    .section-box {
+      background-color: #f8f9fa;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      margin-bottom: 50px;
+    }
+    .compare-btn {
+      background-color: #28a745;
+      border: none;
+      color: white;
+      padding: 10px 25px;
+      border-radius: 30px;
+      font-weight: bold;
+    }
+    .footer {
+      background-color: #0d1b2a;
+      color: #fff;
+      padding: 40px 20px;
+    }
+    .footer a {
+      color: #ccc;
+      text-decoration: none;
+      display: block;
+      margin: 4px 0;
+    }
+    .footer-column h3 {
+      color: #fff;
+      margin-bottom: 15px;
+    }
+    .footer-column p, .footer-column a {
+      font-size: 14px;
+    }
+    .social-icons a {
+      margin-right: 10px;
+      font-size: 18px;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg bg-white shadow-sm px-4">
+    <div class="container-fluid">
+      <a class="navbar-brand brand-text" href="#">Saad Store</a>
+  
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="saad1.html">Home</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Gift By Brands
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="aura.html">GiftAura </a></li>
+                <li><a class="dropdown-item" href="Royal.html">Royal Gifts</a></li>
+                <li><a class="dropdown-item" href="Elite Treasures.html">Elite Treasures</a></li>
+                <li><a class="dropdown-item" href="sitara.html">Sitara Gifts</a></li>
+                  <li><a class="dropdown-item" href="Allbrands.html">All Brands</a></li>
+                </ul>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Gift By Categories
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="mugs.html">Mugs</a></li>
+                    <li><a class="dropdown-item" href="bracelet.html">Bracelets</a></li>
+                    <li><a class="dropdown-item" href="watches.html">Watches</a></li>
+                      <li><a class="dropdown-item" href="#">Brand 4</a></li>
+                      <li><a class="dropdown-item" href="#">All Categories</a></li>
+                    </ul>
+        
+                   <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                   <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                </ul>
+            </div>
+      <div class="d-flex align-items-center gap-3">
+        <a href="#" class="nav-icon"><i class="fas fa-map-marker-alt"></i></a>
+        <a href="#" class="nav-icon"><i class="fas fa-shopping-cart"></i></a>
+      </div>
+  </div>
+  </nav>
+ <!-- Saad Store Premium About Section -->
+<section class="container py-5">
+  <div class="about-box-custom">
+    <h2 class="mb-3 text-center about-title">About Saad Store</h2>
+    <p class="about-text text-center">Premium Gifting Hub for Memorable Moments</p>
+
+    <div class="row mt-4">
+      <div class="col-md-6">
+        <h4 class="about-subheading">Our Mission</h4>
+        <p class="about-text">At <strong>Saad Store</strong>, we turn emotions into elegant gifts. Whether it's love, gratitude, or celebration — our products express what words can't.</p>
+
+        <h4 class="about-subheading mt-4">Core Values</h4>
+        <ul class="about-list">
+          <li>Luxury Products & Unique Ideas</li>
+          <li>Customer First Approach</li>
+          <li>On-Time & Safe Delivery</li>
+          <li>Always Affordable & Stylish</li>
+        </ul>
+      </div>   
+    </div>
+
+    <!-- Counter Stats -->
+    <div class="row text-center mt-5">
+      <div class="col-md-3 stat-box">
+        <h3>10K+</h3>
+        <p>Happy Customers</p>
+      </div>
+      <div class="col-md-3 stat-box">
+        <h3>250+</h3>
+        <p>Premium Products</p>
+      </div>
+      <div class="col-md-3 stat-box">
+        <h3>95%</h3>
+        <p>Repeat Buyers</p>
+      </div>
+      <div class="col-md-3 stat-box">
+        <h3>24/7</h3>
+        <p>Support Team</p>
+      </div>
+    </div>
+
+    <!-- Team Highlight -->
+    <div class="team-box mt-5">
+      <h4 class="about-subheading text-center">Meet the Heart Behind Saad Store</h4>
+      <p class="about-text text-center">From creative packaging to customer care — our team ensures every order is packed with love and style. We're passionate about gifts and happiness!</p>
+    </div>
+
+    <div class="text-center mt-4">
+      <a href="contact.html" class="btn-shopnow-custom">Get in Touch</a>
+    </div>
+  </div>
+</section>
+<section class="why-choose py-5 text-center bg-light">
+  <div class="container">
+    <h2 class="mb-4 fw-bold">Why Choose Saad Store?</h2>
+    <div class="row">
+      <div class="col-md-3">
+        <div class="choose-box">
+          <i class="fas fa-gift fa-2x mb-3"></i>
+          <h5>Premium Gifts</h5>
+          <p>Handpicked premium products for every occasion.</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="choose-box">
+          <i class="fas fa-shipping-fast fa-2x mb-3"></i>
+          <h5>Fast Delivery</h5>
+          <p>We make sure your gift arrives in perfect time.</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="choose-box">
+          <i class="fas fa-headset fa-2x mb-3"></i>
+          <h5>24/7 Support</h5>
+          <p>We’re here to assist you anytime, anywhere.</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="choose-box">
+          <i class="fas fa-smile fa-2x mb-3"></i>
+          <h5>Happy Clients</h5>
+          <p>Over 10,000 smiles delivered nationwide.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Compare and Choose Section -->
+  <section class="container pb-5">
+    <div class="section-box text-center">
+      <h2 class="mb-3">Compare and Choose the Best</h2>
+      <p>We help you pick the best gifts by comparing prices, quality, and ratings from top brands. Our gift comparison feature gives you the power to find the best value for your money while making sure your gift is special and meaningful.</p>
+      <p>From luxury collections to budget-friendly picks, we've got you covered. Let us help you shop smarter and faster.</p>
+      <a href="compare.html"><button class="compare-btn mt-3">Compare Now</button></a>
+    </div>
+
+  </section>
+  
+  <section class="testimonials bg-dark text-white py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">What Our Customers Say</h2>
+      <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner text-center">
+          <div class="carousel-item active">
+            <p class="lead">“Absolutely loved the quality and packaging. Best store for gifts!”</p>
+            <h6>- Ayesha Khan</h6>
+          </div>
+          <div class="carousel-item">
+            <p class="lead">“Super fast delivery and beautiful presentation. Highly recommended!”</p>
+            <h6>- Bilal Ahmed</h6>
+          </div>
+          <div class="carousel-item">
+            <p class="lead">“Ordered for a birthday gift — exceeded expectations!”</p>
+            <h6>- Fatima Raza</h6>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row text-start">
+        <div class="col-md-3 footer-column">
+          <h3>CONTACT US</h3>
+          <p>+1 (844) 326-6005</p>
+          <a href="mailto:saad@gmail.com">saad@gmail.com</a>
+          <p>Mon-Fri 9am-3pm PT</p>
+          <p>Location: Your City, Country</p>
+        </div>
+        <div class="col-md-3 footer-column">
+          <h3>CUSTOMERS</h3>
+          <a href="#">Start a Return</a>
+          <a href="#">Return Policy</a>
+          <a href="#">FAQ</a>
+          <a href="#">Catalogs and Mailers</a>
+          <a href="#">Do Not Sell My Info</a>
+        </div>
+        <div class="col-md-3 footer-column">
+          <h3>COMPANY</h3>
+          <a href="#">About Us</a>
+          <a href="#">Sustainability</a>
+          <a href="#">Discover Revive</a>
+          <a href="#">Careers</a>
+          <a href="#">Privacy Policy</a>
+        </div>
+        <div class="col-md-3 footer-column">
+          <h3>FOLLOW US</h3>
+          <div class="social-icons">
+            <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

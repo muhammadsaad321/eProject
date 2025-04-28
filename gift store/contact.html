@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Saad Store</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="contact.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" >
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg bg-white shadow-sm px-4">
+  <div class="container-fluid">
+    <a class="navbar-brand brand-text" href="#">Saad Store</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="saad1.html">Home</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-bs-toggle="dropdown">Gift By Brands</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="aura.html">GiftAura </a></li>
+            <li><a class="dropdown-item" href="Royal.html">Royal Gifts</a></li>
+            <li><a class="dropdown-item" href="Elite Treasures.html">Elite Treasures</a></li>
+            <li><a class="dropdown-item" href="sitara.html">Sitara Gifts</a></li>
+            <li><a class="dropdown-item" href="Allbrands.html">All Brands</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-bs-toggle="dropdown">Gift By Categories</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="mugs.html">Mugs</a></li>
+            <li><a class="dropdown-item" href="bracelet.html">Bracelets</a></li>
+            <li><a class="dropdown-item" href="watches.html">Watches</a></li>
+            <li><a class="dropdown-item" href="bags.html">Bags</a></li>
+            <li><a class="dropdown-item" href="category.html">All Categories</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+      </ul>
+    </div>
+
+    <div class="d-flex align-items-center gap-3">
+      <a href="#" class="nav-icon"><i class="fas fa-map-marker-alt"></i></a>
+      <a href="#" class="nav-icon"><i class="fas fa-shopping-cart"></i></a>
+    </div>
+  </div>
+</nav>
+
+<!-- Contact Section -->
+<section class="contact-section">
+  <div class="container">
+    <h2 class="section-title">Get in Touch</h2>
+    <div class="contact-info">
+      <div class="contact-item">
+        <i class="fas fa-map-marker-alt"></i>
+        <h4>Our Location</h4>
+        <p>123 Gift Street, Gift City, USA</p>
+      </div>
+      <div class="contact-item">
+        <i class="fas fa-envelope"></i>
+        <h4>Email Us</h4>
+        <p><a href="mailto:saad@gmail.com">saad@gmail.com</a></p>
+      </div>
+      <div class="contact-item">
+        <i class="fas fa-phone-alt"></i>
+        <h4>Call Us</h4>
+        <p>+1 (234) 567-890</p>
+      </div>
+    </div>
+
+  
+    <form class="contact-form needs-validation" novalidate>
+      <div class="form-group">
+        <label for="name2">Your Name</label>
+        <input type="text" id="name2" placeholder="Enter your name" required>
+        <div class="invalid-feedback">Please enter your name.</div>
+      </div>
+      <div class="form-group">
+        <label for="email2">Your Email</label>
+        <input type="email" id="email2" placeholder="Enter your email" required>
+        <div class="invalid-feedback">Please enter a valid email.</div>
+      </div>
+      <div class="form-group">
+        <label for="phone2">Your Phone</label>
+        <input type="text" id="phone2" placeholder="Enter your phone number" required>
+        <div class="invalid-feedback">Please enter your phone number.</div>
+      </div>
+      <div class="form-group">
+        <label for="address2">Your Address</label>
+        <input type="text" id="address2" placeholder="Enter your address" required>
+        <div class="invalid-feedback">Please enter your address.</div>
+      </div>
+      <div class="form-group">
+        <label for="message2">Your Message</label>
+        <textarea id="message2" placeholder="Enter your message" rows="4" required></textarea>
+        <div class="invalid-feedback">Please enter your message.</div>
+      </div>
+      <button type="submit" class="submit-btn">Send Message</button>
+    </form>
+        
+
+    <!-- Location Map -->
+    <div id="map"></div>
+
+  </div>
+</section>
+
+<!-- Footer -->
+<section class="body1">
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-column">
+      <h3>CONTACT US</h3>
+      <p>+1 (844) 326-6005</p>
+      <a href="mailto:saad@gmail.com">saad@gmail.com</a>
+      <p>Mon-Fri 9am-3pm PT</p>
+      <p>Location: Your City, Country</p>
+    </div>
+    <div class="footer-column">
+      <h3>CUSTOMERS</h3>
+      <a href="#">Start a Return</a>
+      <a href="#">Return Policy</a>
+      <a href="#">FAQ</a>
+      <a href="#">Catalogs and Mailers</a>
+      <a href="#">Do Not Sell My Info</a>
+      <a href="#">About Group Gifting</a>
+    </div>
+    <div class="footer-column">
+      <h3>COMPANY</h3>
+      <a href="#">About Us</a>
+      <a href="#">Sustainability</a>
+      <a href="#">Discover Revive</a>
+      <a href="#">Careers</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms</a>
+      <a href="#">Accessibility</a>
+    </div>
+    <div class="footer-column">
+      <h3>FOLLOW US</h3>
+      <div class="social-icons">
+        <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-info">
+    <p>Thank you for choosing Saad Store! We aim to deliver your order within 5-7 business days. However, please note that due to potential issues such as product availability, shipping delays, or high demand, your order might experience a slight delay. We appreciate your understanding and patience!</p>
+  </div>
+</footer>
+</section>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script>
+    (function () {
+      'use strict';
+      const forms = document.querySelectorAll('.needs-validation');
+      forms.forEach((form) => {
+        form.addEventListener('submit', function (event) {
+          if (!form.checkValidity()) {
+            event.preventDefault();
+            event.stopPropagation();
+          } else {
+            event.preventDefault();
+            alert("Form submitted successfully!");
+            form.reset();
+            form.classList.remove('was-validated');
+          }
+          form.classList.add('was-validated');
+        }, false);
+      });
+    })();
+  
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showMap, error);
+  } else {
+    alert("Your Browser Can't  Support ");
+  }
+
+  function showMap(position) {
+    var lat = position.coords.latitude;
+    var lon = position.coords.longitude;
+    var map = L.map('map').setView([lat, lon], 13);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19
+    }).addTo(map);
+
+    L.marker([lat, lon]).addTo(map)
+      .bindPopup("You Are here!")
+      .openPopup();
+  }
+
+  function error() {
+    alert("Can't Get Your Location");
+  }
+</script>
+
+</body>
+</html>

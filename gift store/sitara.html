@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EleGift</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<style>
+    .brand-text {
+    color: #FF2E63;
+    font-weight: 700;
+    font-size: 24px;
+ 
+  }
+  
+  .nav-link {
+    font-weight: 500;
+    color: #333 !important;
+    transition: color 0.3s; 
+  }
+  
+  .nav-link:hover,
+  .nav-link.active {
+    color: #FF2E63 !important;
+  }
+  
+  .nav-icon {
+    font-size: 20px;
+    color: #333;
+    transition: color 0.3s;
+    text-decoration: none;
+    padding: 10px;
+  }
+  
+  .nav-icon:hover {
+    color:#FF2E63;
+  }
+  .nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  .dropdown-menu {
+    display: none;
+  }
+    .gift-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  justify-items: center;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+    .gift-card {
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 300px;
+  transition: all 0.5s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #f0f0f0;
+}
+
+.gift-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 14px;
+  transition: transform 0.4s ease;
+}
+.section-heading {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-heading h2 {
+  font-size: 36px;
+  color: #FF2E63;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 12px;
+  font-family: 'Cinzel', serif; /* Optional: for luxury look */
+}
+
+.section-heading h2::after {
+  content: '';
+  position: absolute;
+  width: 60%;
+  height: 3px;
+  background-color: #FF2E63;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  border-radius: 5px;
+}
+.gift-card h3 {
+  margin: 15px 0 6px;
+  font-size: 18px;
+  color: #222;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.gift-card p {
+  color: #777;
+  font-size: 15px;
+  margin-bottom: 14px;
+  margin-left: 20px;
+}
+
+.gift-card button {
+  padding: 10px 25px;
+  background: #FF2E63;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  font-weight: 500;
+  cursor: pointer;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.gift-card::before {
+  content: "";
+  position: absolute;
+  width: 160%;
+  height: 160%;
+  top: -30%;
+  left: -30%;
+  background: radial-gradient(circle at center, rgba(255,46,99,0.06), transparent);
+  opacity: 0;
+  transition: all 0.4s ease;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.gift-card:hover::before {
+  opacity: 1;
+}
+
+.gift-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(255, 46, 99, 0.15);
+}
+
+.gift-card:hover img {
+  transform: scale(1.05);
+}
+
+.gift-card:hover button {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Premium Item Banner */
+.premium-banner {
+  background: #f7f7f7;
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.banner-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.banner-img {
+  flex: 1 1 450px;
+  height: 500px;
+  overflow: hidden;
+}
+
+.banner-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.banner-text {
+  flex: 1 1 500px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.banner-text h2 {
+  font-size: 36px;
+  color: #FF2E63;
+  margin-bottom: 20px;
+  font-family: 'Cinzel', serif;
+  font-weight: bold;
+}
+
+.banner-text .description {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.price-buy {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+}
+
+.price {
+  font-size: 24px;
+  font-weight: bold;
+  color: #FF2E63;
+}
+
+.buy-btn {
+  background-color: #FF2E63;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+.buy-btn:hover {
+  background-color: #d61e55;
+}
+
+.banner-container:hover .banner-img img {
+  transform: scale(1.05);
+}
+.footer {
+ background-color: #000;
+  color: white;
+  padding: 40px 20px;
+  text-align: left;
+}
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.footer-column {
+  max-width: 300px;
+}
+.footer a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  margin: 5px 0;
+}
+.footer a:hover {
+  text-decoration: underline;
+}
+.social-icons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+.social-icons a {
+  color: white;
+  font-size: 20px;
+}
+
+</style>
+<body>
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm px-4">
+        <div class="container-fluid">
+          <a class="navbar-brand brand-text" href="#">Saad Store</a>
+      
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+      
+          <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="saad1.html">Home</a></li>
+             <!-- Dropdown for Gift By Brands -->
+      <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Gift By Brands
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="aura.html">GiftAura </a></li>
+              <li><a class="dropdown-item" href="Royal.html">Royal Gifts</a></li>
+              <li><a class="dropdown-item" href="Elite Treasures.html">Elite Treasures</a></li>
+              <li><a class="dropdown-item" href="sitara.html">Sitara Gifts</a></li>
+              <li><a class="dropdown-item" href="Allbrands.html">All Brands</a></li>
+            </ul>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Gift By Categories
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="mugs.html">Mugs</a></li>
+                  <li><a class="dropdown-item" href="bracelet.html">Bracelets</a></li>
+                  <li><a class="dropdown-item" href="watches.html">Watches</a></li>
+                  <li><a class="dropdown-item" href="bags.html">Bags</a></li>
+                  <li><a class="dropdown-item" href="category.html">All Categories</a></li>
+                </ul>
+    
+               <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+               <li class="nav-item"><a class="nav-link" href="compare.html">About Us</a></li>
+               
+            </ul>
+        </div>
+          <div class="d-flex align-items-center gap-3">
+            <a href="#" class="nav-icon"><i class="fas fa-map-marker-alt"></i></a>
+            <a href="#" class="nav-icon"><i class="fas fa-shopping-cart"></i></a>
+          </div>
+        </div>
+      </nav>
+    <section class="gift-section">
+        <div class="section-heading">
+          <h2>Sitara Box Gifts</h2>
+        <div class="gift-container">
+          <div class="gift-card">
+            <img src="photo-1623279743107-152e86999257.avif" alt="Sitara Signature Scent">
+            <h3>Sitara Signature Scent</h3>
+            <p>Rs. 3,200</p>
+            <button>Buy Now</button>
+          </div>
+          <div class="gift-card">
+            <img src="pink-gift-box-transparent-background-png-clipart_88754-483.avif" alt="StarTime Watch">
+            <h3>StarTime Watch</h3>
+            <p>Rs. 5,000</p>
+            <button>Buy Now</button>
+          </div>
+          <div class="gift-card">
+            <img src="white-gift-box-with-red-ribbon-bow-white-background_1357-337.avif" alt="Golden Gleam Pen">
+            <h3>Golden Gleam Pen</h3>
+            <p>Rs. 1,800</p>
+            <button>Buy Now</button>
+          </div>
+          <div class="gift-card">
+            <img src="istockphoto-1180244659-612x612.jpg" alt="Crystal Shine Frame">
+            <h3>Crystal Shine Frame</h3>
+            <p>Rs. 2,500</p>
+            <button>Buy Now</button>
+          </div>
+          <div class="gift-card">
+            <img src="istockphoto-1180244659-612x612.jpg" alt="Sitara Mug Pair">
+            <h3>Sitara Mug Pair</h3>
+            <p>Rs. 1,200</p>
+            <button>Buy Now</button>
+          </div>
+          <div class="gift-card">
+            <img src="pink-gift-box-transparent-background-png-clipart_88754-483.avif" alt="Elegant Wallet">
+            <h3>Elegant Wallet</h3>
+            <p>Rs. 2,000</p>
+            <button>Buy Now</button>
+          </div>
+          <div class="gift-card">
+            <img src="white-gift-box-with-red-ribbon-bow-white-background_1357-337.avif" alt="Twilight Candles">
+            <h3>Twilight Candles</h3>
+            <p>Rs. 950</p>
+            <button>Buy Now</button>
+          </div>
+          <div class="gift-card">
+            <img src="pink-gift-box-transparent-background-png-clipart_88754-483.avif" alt="Handcrafted Journal">
+            <h3>Handcrafted Journal</h3>
+            <p>Rs. 1,100</p>
+            <button>Buy Now</button>
+          </div>
+          <div class="gift-card">
+            <img src="istockphoto-182215149-612x612.jpg" alt="Sitara Celebration Hamper">
+            <h3>Sitara Celebration Hamper</h3>
+            <p>Rs. 3,800</p>
+            <button>Buy Now</button>
+          </div>
+        </div>
+      </section>
+      <section class="premium-banner">
+        <div class="banner-container">
+          <div class="banner-img">
+            <img src="istockphoto-155096568-612x612.jpg" alt="Luxury Gift Box">
+          </div>
+          <div class="banner-text">
+            <h2>Luxury Gift Box</h2>
+            <p class="description">
+              This exquisite luxury gift box is the perfect choice for those who demand nothing but the finest. Carefully curated items that will leave a lasting impression.
+            </p>
+            <div class="price-buy">
+              <span class="price">Rs. 19,999</span>
+              <a href="#" class="buy-btn">Buy Now</a>
+            </div>
+          </div>
+        </div>
+      </section>
+       <!-- Footer Section -->
+       <section class="body1">
+        <footer class="footer">
+          <div class="footer-container">
+              <div class="footer-column">
+                  <h3>CONTACT US</h3>
+                  <p>‪+1 (844) 326-6005‬</p>
+                  <a href="mailto:saad@gmail.com">saad@gmail.com</a>
+                  <p>Mon-Fri 9am-3pm PT</p>
+                  <p>Location: Your City, Country</p>
+              </div>
+              <div class="footer-column">
+                  <h3>CUSTOMERS</h3>
+                  <a href="#">Start a Return</a>
+                  <a href="#">Return Policy</a>
+                  <a href="#">FAQ</a>
+                  <a href="#">Catalogs and Mailers</a>
+                  <a href="#">Do Not Sell My Info</a>
+                  <a href="#">About Group Gifting</a>
+              </div>
+              <div class="footer-column">
+                  <h3>COMPANY</h3>
+                  <a href="#">About Us</a>
+                  <a href="#">Sustainability</a>
+                  <a href="#">Discover Revive</a>
+                  <a href="#">Careers</a>
+                  <a href="#">Privacy Policy</a>
+                  <a href="#">Terms</a>
+                  <a href="#">Accessibility</a>
+              </div> 
+              <div class="footer-column">
+                  <h3>FOLLOW US</h3>
+                  <div class="social-icons">
+                      <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+                      <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                      <a href="https://www.tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
+                  </div>
+              </div>
+          </div>
+        </footer>
+</body>
+</html>

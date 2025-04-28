@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EleGift</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+   <link rel="stylesheet" href="saad1.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+<style>
+    .vip-watches {
+  padding: 50px 20px;
+  background: #fff;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #222;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.watch-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.watch-card {
+  background: #fff;
+  width: 260px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.watch-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.watch-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.watch-card:hover img {
+  transform: scale(1.05);
+}
+
+.watch-card h3 {
+  margin: 15px 0 8px;
+  font-size: 18px;
+  color: #333;
+}
+
+.price {
+  color: #e91e63;
+  font-weight: bold;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.buy-btn {
+  background: #e91e63;
+  color: #fff;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 50px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.buy-btn:hover {
+  background: #c2185b;
+  transform: scale(1.05);
+  box-shadow: 0 0 12px rgba(233,30,99,0.5);
+}
+.luxury-section {
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.luxury-heading {
+  font-size: 34px;
+  margin-bottom: 40px;
+  color: #111;
+  font-weight: bold;
+}
+
+.luxury-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.luxury-card {
+  width: 320px;
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.luxury-card:hover {
+  transform: scale(1.03);
+}
+
+.luxury-label {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background-color: #e91e63;
+  color: #fff;
+  font-size: 12px;
+  padding: 5px 12px;
+  border-radius: 30px;
+  font-weight: bold;
+  z-index: 1;
+}
+
+.luxury-image {
+  height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.luxury-image img {
+  max-height: 100%;
+  width: auto;
+  object-fit: contain;
+}
+
+.luxury-content {
+  padding: 20px;
+  text-align: left;
+}
+
+.luxury-content h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #111;
+}
+
+.lux-desc {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+.lux-price {
+  font-size: 16px;
+  color: #e91e63;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.lux-btn {
+  background-color: transparent;
+  border: 2px solid #e91e63;
+  color: #e91e63;
+  padding: 10px 25px;
+  border-radius: 30px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.lux-btn:hover {
+  background-color: #e91e63;
+  color: white;
+  
+  box-shadow: 0 5px 15px rgba(233, 30, 99, 0.4);
+
+}
+.footer {
+  background-color: #0a0a0a;
+  color: #ccc;
+  padding: 50px 20px 30px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-col {
+  flex: 1 1 250px;
+}
+
+.logo-col h2 {
+  color: #fff;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.footer h3 {
+  color: #fff;
+  margin-bottom: 15px;
+  font-size: 18px;
+  border-bottom: 2px solid #e91e63;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.footer-col p, 
+.footer-col a {
+  font-size: 14px;
+  color: #aaa;
+  margin: 8px 0;
+  text-decoration: none;
+}
+
+.footer-col i {
+  margin-right: 10px;
+  color: #e91e63;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a:hover,
+.social-links a:hover {
+  color: #fff;
+  transition: 0.3s ease;
+}
+
+.social-links a {
+  display: block;
+  margin: 8px 0;
+  color: #aaa;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.social-links a i {
+  margin-right: 8px;
+  color: #e91e63;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #333;
+  margin-top: 30px;
+  padding-top: 20px;
+  font-size: 13px;
+  color: #888;
+}
+</style>
+<body>
+  <nav class="navbar navbar-expand-lg bg-white shadow-sm px-4">
+    <div class="container-fluid">
+      <a class="navbar-brand brand-text" href="#">Saad Store</a>
+  
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="saad1.html">Home</a></li>
+         <!-- Dropdown for Gift By Brands -->
+  <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Gift By Brands
+      </a>
+      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <li><a class="dropdown-item" href="aura.html">GiftAura </a></li>
+          <li><a class="dropdown-item" href="Royal.html">Royal Gifts</a></li>
+          <li><a class="dropdown-item" href="Elite Treasures.html">Elite Treasures</a></li>
+          <li><a class="dropdown-item" href="sitara.html">Sitara Gifts</a></li>
+          <li><a class="dropdown-item" href="Allbrands.html">All Brands</a></li>
+        </ul>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Gift By Categories
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="mugs.html">Mugs</a></li>
+              <li><a class="dropdown-item" href="bracelet.html">Bracelets</a></li>
+              <li><a class="dropdown-item" href="watches.html">Watches</a></li>
+              <li><a class="dropdown-item" href="bags.html">Bags</a></li>
+              <li><a class="dropdown-item" href="category.html">All Categories</a></li>
+            </ul>
+
+           <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+           <li class="nav-item"><a class="nav-link" href="compare.html">About Us</a></li>
+           
+        </ul>
+    </div>
+      <div class="d-flex align-items-center gap-3">
+        <a href="#" class="nav-icon"><i class="fas fa-map-marker-alt"></i></a>
+        <a href="#" class="nav-icon"><i class="fas fa-shopping-cart"></i></a>
+      </div>
+    </div>
+  </nav>
+    <section class="vip-watches">
+        <h2 class="section-title">WOMEN WATCHES</h2>
+        <div class="watch-grid">
+      
+          <div class="watch-card">
+            <img src="pink-gift-box-transparent-background-png-clipart_88754-483.avif" alt="Rose Gold Watch">
+            <h3>Rose Gold Elegant</h3>
+            <p class="price">Rs. 2,499</p>
+            <button class="buy-btn">Buy Now</button>
+          </div>
+          <div class="watch-card">
+            <img src="pink-gift-box-transparent-background-png-clipart_88754-483.avif" alt="Crystal Charm">
+            <h3>Crystal Charm</h3>
+            <p class="price">Rs. 3,199</p>
+            <button class="buy-btn">Buy Now</button>
+          </div>
+          <div class="watch-card">
+            <img src="istockphoto-1180244659-612x612.jpg" alt="Floral Strap">
+            <h3>Floral Strap</h3>
+            <p class="price">Rs. 2,899</p>
+            <button class="buy-btn">Buy Now</button>
+          </div>
+      
+
+      
+          <div class="watch-card">
+            <img src="istockphoto-1166042531-612x612-removebg-preview.png" alt="Leather Classic">
+            <h3>Leather Classic</h3>
+            <p class="price">Rs. 3,799</p>
+            <button class="buy-btn">Buy Now</button>
+          </div>
+          <div class="watch-card">
+            <img src="istockphoto-1166042531-612x612-removebg-preview.png" alt="Chrono Black">
+            <h3>Chrono Black</h3>
+            <p class="price">Rs. 4,499</p>
+            <button class="buy-btn">Buy Now</button>
+          </div>
+          <div class="watch-card">
+            <img src="istockphoto-1166042531-612x612-removebg-preview.png" alt="Steel Strap">
+            <h3>Steel Strap</h3>
+            <p class="price">Rs. 3,999</p>
+            <button class="buy-btn">Buy Now</button>
+          </div>
+          <div class="watch-card">
+            <img src="istockphoto-1166042531-612x612-removebg-preview.png" alt="Steel Strap">
+            <h3>Steel Strap</h3>
+            <p class="price">Rs. 3,999</p>
+            <button class="buy-btn">Buy Now</button>
+          </div>
+          <div class="watch-card">
+            <img src="istockphoto-1166042531-612x612-removebg-preview.png" alt="Steel Strap">
+            <h3>Steel Strap</h3>
+            <p class="price">Rs. 3,999</p>
+            <button class="buy-btn">Buy Now</button>
+        </section>
+         
+      <section class="vip-watches">
+        <h2 class="section-title">MEN WATCHES</h2>
+        <div class="watch-grid">
+      
+          <div class="watch-card">
+            <img src="white-gift-box-with-red-ribbon-bow-white-background_1357-337.avif" alt="Classic Black Dial">
+            <h3>Classic Black Dial</h3>
+            <p class="price">Rs. 3,999</p>
+            <button class="buy-btn">Buy Now</button>
+          </div>
+      
+          <div class="watch-card">
+            <img src="pink-gift-box-transparent-background-png-clipart_88754-483.avif" alt="Royal Blue Chrono">
+            <h3>Royal Blue Chrono</h3>
+            <p class="price">Rs. 4,499</p>
+            <button class="buy-btn">Buy Now</button>
+          </div>
+      
+          <div class="watch-card">
+            <img src="istockphoto-1180244659-612x612.jpg" alt="Vintage Leather">
+            <h3>Vintage Leather</h3>
+            <p class="price">Rs. 3,599</p>
+            <button class="buy-btn">Buy Now</button>
+          </div>
+      
+          <div class="watch-card">
+            <img src="istockphoto-1180244659-612x612.jpg" alt="Titan Silver Edge">
+            <h3>Titan Silver Edge</h3>
+            <p class="price">Rs. 5,199</p>
+            <button class="buy-btn">Buy Now</button>
+          </div>
+      
+          <div class="watch-card">
+            <img src="white-gift-box-with-red-ribbon-bow-white-background_1357-337.avif" alt="Bold Chronograph">
+            <h3>Bold Chronograph</h3>
+            <p class="price">Rs. 6,999</p>
+            <button class="buy-btn">Buy Now</button>
+          </div>
+      
+          <div class="watch-card">
+            <img src="istockphoto-1180244659-612x612.jpg" alt="Titan Silver Edge">
+            <h3>Titan Silver Edge</h3>
+            <p class="price">Rs. 5,199</p>
+            <button class="buy-btn">Buy Now</button>
+          </div>
+          <div class="watch-card">
+            <img src="istockphoto-1180244659-612x612.jpg" alt="Titan Silver Edge">
+            <h3>Titan Silver Edge</h3>
+            <p class="price">Rs. 5,199</p>
+            <button class="buy-btn">Buy Now</button>
+          </div>
+          <div class="watch-card">
+            <img src="istockphoto-1180244659-612x612.jpg" alt="Titan Silver Edge">
+            <h3>Titan Silver Edge</h3>
+            <p class="price">Rs. 5,199</p>
+            <button class="buy-btn">Buy Now</button>
+          </div>
+      </div>
+      
+      </section>
+      <section class="vip-luxury-section">
+
+        
+        <div class="vip-lux-grid">
+      
+          <section class="luxury-section">
+            <h2 class="luxury-heading">Premium Watches</h2>
+            <div class="luxury-container">
+          
+              <!-- Woman Watch -->
+              <div class="luxury-card">
+                <span class="luxury-label">WOMAN</span>
+                <div class="luxury-image">
+                  <img src="pink-gift-box-transparent-background-png-clipart_88754-483.avif" alt="Diamond Rose Gold">
+                </div>
+                <div class="luxury-content">
+                  <h3>Diamond Rose Gold</h3>
+                  <p class="lux-desc">Real diamond dial, rose gold frame — a true statement of elegance.</p>
+                  <p class="lux-price">Rs. 19,999</p>
+                  <button class="lux-btn">Shop Now</button>
+                </div>
+              </div>
+          
+              <!-- Man Watch -->
+              <div class="luxury-card">
+                <span class="luxury-label">MAN</span>
+                <div class="luxury-image">
+                  <img src="istockphoto-182215149-612x612.jpg" alt="Chrono Master Steel">
+                </div>
+                <div class="luxury-content">
+                  <h3>Chrono Master Steel</h3>
+                  <p class="lux-desc">Swiss chronograph with sapphire glass — bold & timeless for real gentlemen.</p>
+                  <p class="lux-price">Rs. 22,999</p>
+                  <button class="lux-btn">Shop Now</button>
+                </div>
+              </div>
+          
+            </div>
+          </section>
+          <footer class="footer">
+            <div class="footer-container">
+              <div class="footer-col logo-col">
+                <h2>GIFTS ONLINE</h2>
+                <p>Luxury Gifts for Every Occasion. Make Your Moments Memorable.</p>
+                <p><i class="fas fa-map-marker-alt"></i> Karachi, Pakistan</p>
+                <p><i class="fas fa-envelope"></i> saad734@gmail.com</p>
+                <p><i class="fas fa-phone-alt"></i> ‪+92 300 1234567‬</p>
+              </div>
+          
+              <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Bracelets</a></li>
+                  <li><a href="#">Watches</a></li>
+                  <li><a href="#">Mugs</a></li>
+                  <li><a href="#">Contact</a></li>
+                </ul>
+              </div>
+          
+              <div class="footer-col">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                  <a href="#"><i class="fab fa-facebook-f"></i> Facebook</a>
+                  <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+                  <a href="#"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                  <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+                </div>
+              </div>
+            </div>
+          
+            <div class="footer-bottom">
+              <p>&copy; 2025 GIFTS ONLINE | Designed by Saad</p>
+            </div>
+          </footer>
+</body>
+</html>

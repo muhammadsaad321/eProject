@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GiftAura - Saad Store</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="Allbrands.css">
+  <style>
+    .brand-text {
+      color: #FF2E63;
+      font-weight: 700;
+      font-size: 24px;
+    }
+
+    .nav-link {
+      font-weight: 500;
+      color: #333 !important;
+      transition: color 0.3s;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: #FF2E63 !important;
+    }
+
+    .nav-icon {
+      font-size: 20px;
+      color: #333;
+      transition: color 0.3s;
+      text-decoration: none;
+      padding: 10px;
+    }
+
+    .nav-icon:hover {
+      color: #FF2E63;
+    }
+
+    .nav-item.dropdown:hover .dropdown-menu {
+      display: block;
+    }
+
+    .dropdown-menu {
+      display: none;
+    }
+
+    /* Custom Card Styles */
+    .card {
+      border: 2px solid #eee;
+      border-radius: 15px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 4px 20px rgba(255, 46, 99, 0.3);
+    }
+
+    .card-img-top {
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .card-body {
+      text-align: center;
+    }
+
+    .card-title {
+      font-size: 1.2rem;
+      color: #333;
+      font-weight: 600;
+    }
+
+    .card-price {
+      font-size: 1rem;
+      color: #FF2E63;
+      font-weight: 500;
+    }
+
+    .card-description {
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    .card:hover .card-title,
+    .card:hover .card-price {
+      color: #FF2E63;
+    }
+
+    .card:hover .card-description {
+      color: #333;
+    }
+
+    /* Brand History Section */
+    .brand-history {
+      padding: 20px;
+      margin-top: 30px;
+      background-color: #f7f7f7;
+      border-radius: 10px;
+    }
+
+    .brand-name {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #333;
+    }
+
+    .brand-history p {
+      font-size: 1rem;
+      color: #666;
+    }
+
+    .brand-history h3 {
+      color: #FF2E63;
+      font-size: 1.5rem;
+    }
+    .premium-banner-box {
+  background-color: #111;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 25px rgba(0,0,0,0.2);
+}
+
+.premium-banner-img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.premium-banner-text {
+  background: linear-gradient(to right, #111, #222);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.premium-banner-text h2 {
+  color: #FF2E63;
+}
+
+.premium-banner-text p {
+  font-size: 1.1rem;
+  color: #ddd;
+}
+
+.premium-banner-text .btn {
+  background-color: #FF2E63;
+  color: white;
+  border: none;
+  transition: 0.3s ease;
+}
+
+.premium-banner-text .btn:hover {
+  background-color: #e02657;
+}
+.footer {
+ background-color: #000;
+  color: white;
+  padding: 40px 20px;
+  text-align: left;
+}
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.footer-column {
+  max-width: 300px;
+}
+.footer a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  margin: 5px 0;
+}
+.footer a:hover {
+  text-decoration: underline;
+}
+.social-icons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+.social-icons a {
+  color: white;
+  font-size: 20px;
+}
+
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg bg-white shadow-sm px-4">
+    <div class="container-fluid">
+      <a class="navbar-brand brand-text" href="#">Saad Store</a>
+  
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="saad1.html">Home</a></li>
+         <!-- Dropdown for Gift By Brands -->
+         <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Gift By Brands
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="aura.html">GiftAura </a></li>
+            <li><a class="dropdown-item" href="Royal.html">Royal Gifts</a></li>
+            <li><a class="dropdown-item" href="Elite Treasures.html">Elite Treasures</a></li>
+            <li><a class="dropdown-item" href="sitara.html">Sitara Gifts</a></li>
+              <li><a class="dropdown-item" href="Allbrands.html">All Brands</a></li>
+            </ul>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Gift By Categories
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="mugs.html">Mugs</a></li>
+                <li><a class="dropdown-item" href="bracelet.html">Bracelets</a></li>
+                <li><a class="dropdown-item" href="watches.html">Watches</a></li>
+                <li><a class="dropdown-item" href="bags.html">Bags</a></li>
+                  <li><a class="dropdown-item" href="category.html">All Categories</a></li>
+                </ul>
+    
+               <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+               <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+            </ul>
+        </div>
+      <div class="d-flex align-items-center gap-3">
+        <a href="#" class="nav-icon"><i class="fas fa-map-marker-alt"></i></a>
+        <a href="#" class="nav-icon"><i class="fas fa-shopping-cart"></i></a>
+      </div>
+    </div>
+  </nav>
+  <div class="container mt-5">
+    <h2 class="text-center mb-4">GiftAura Collection</h2>
+    <div class="row mt-4">
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="istockphoto-1180244659-612x612.jpg" class="card-img-top" alt="Perfume Gift">
+          <div class="card-body">
+            <h5 class="card-title">Luxury Perfume Set</h5>
+            <p class="card-price">$40.00</p>
+            <p class="card-description">A beautifully packaged perfume gift set perfect for special moments.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="istockphoto-182215149-612x612.jpg" class="card-img-top" alt="Watch Gift">
+          <div class="card-body">
+            <h5 class="card-title">Designer Watch</h5>
+            <p class="card-price">$75.00</p>
+            <p class="card-description">Elegant wristwatch to make a timeless impression.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="pink-gift-box-transparent-background-png-clipart_88754-483.avif" class="card-img-top" alt="Scarf Gift">
+          <div class="card-body">
+            <h5 class="card-title">Silk Scarf</h5>
+            <p class="card-price">$22.00</p>
+            <p class="card-description">Luxurious silk scarf for a graceful gift option.</p>
+          </div>
+        </div>
+      </div>
+   
+<!-- Add this to the existing .row where the first 6 cards are -->
+<!-- Card 7 -->
+<div class="col-md-4 mb-4">
+  <div class="card">
+    <img src="istockphoto-1180244659-612x612.jpg" class="card-img-top" alt="Gift Image">
+    <div class="card-body">
+      <h5 class="card-title">Gleam Gift Box</h5>
+      <p class="card-price">$40.00</p>
+      <p class="card-description">A luxurious gift box filled with handpicked items for special moments.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Card 8 -->
+<div class="col-md-4 mb-4">
+  <div class="card">
+    <img src="pink-gift-box-transparent-background-png-clipart_88754-483.avif" class="card-img-top" alt="Gift Image">
+    <div class="card-body">
+      <h5 class="card-title">Gleam Chocolate Set</h5>
+      <p class="card-price">$18.00</p>
+      <p class="card-description">Premium assorted chocolates wrapped elegantly, perfect for gifting.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Card 9 -->
+<div class="col-md-4 mb-4">
+  <div class="card">
+    <img src="istockphoto-155096568-612x612.jpg" class="card-img-top" alt="Gift Image">
+    <div class="card-body">
+      <h5 class="card-title">Gleam Mug & Card</h5>
+      <p class="card-price">$12.00</p>
+      <p class="card-description">A heartwarming gift featuring a designer mug and greeting card combo.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Card 10 -->
+<div class="col-md-4 mb-4">
+  <div class="card">
+    <img src="pink-gift-box-transparent-background-png-clipart_88754-483.avif" class="card-img-top" alt="Gift Image">
+    <div class="card-body">
+      <h5 class="card-title">Gleam Fragrance Pack</h5>
+      <p class="card-price">$28.00</p>
+      <p class="card-description">A delightful combo of perfumes and body sprays, ideal for him & her.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Card 11 -->
+<div class="col-md-4 mb-4">
+  <div class="card">
+    <img src="istockphoto-1180244659-612x612.jpg" class="card-img-top" alt="Gift Image">
+    <div class="card-body">
+      <h5 class="card-title">Gleam Travel Kit</h5>
+      <p class="card-price">$22.00</p>
+      <p class="card-description">Stylish and compact travel essentials set, great for corporate gifts.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Card 12 -->
+<div class="col-md-4 mb-4">
+  <div class="card">
+    <img src="istockphoto-155096568-612x612.jpg" class="card-img-top" alt="Gift Image">
+    <div class="card-body">
+      <h5 class="card-title">Gleam Flower Basket</h5>
+      <p class="card-price">$30.00</p>
+      <p class="card-description">A basket of fresh and fragrant flowers wrapped in luxury packaging.</p>
+    </div>
+  </div>
+</div>
+    </div>
+    <!-- Luxury Gift Banner Section -->
+<div class="container-fluid mt-5">
+  <div class="row align-items-center premium-banner-box">
+    <div class="col-md-6 p-0">
+      <img src="istockphoto-155096568-612x612.jpg" class="img-fluid w-100 premium-banner-img" alt="Premium Gifts">
+    </div>
+    <div class="col-md-6 text-white premium-banner-text p-5">
+      <h2 class="display-5 fw-bold">Luxury Gift Collection</h2>
+      <p class="mt-3">Discover exclusive gifts for your special moments — perfumes, watches, jewelry, and more. Elegance meets excellence.</p>
+      <a href="premium.html" class="btn btn-light mt-4 px-4 py-2">Shop Premium</a>
+    </div>
+  </div>
+</div>
+    <!-- Brand History Section -->
+    <div class="brand-history">
+      <h2 class="brand-name">GiftAura</h2>
+      <p>GiftAura is your go-to destination for elegant, thoughtful, and beautifully packaged gift items for every occasion. From fragrances to fashion accessories, each product is crafted to create unforgettable memories.</p>
+      <h3>Our Story</h3>
+      <p>Founded with a passion for spreading joy, GiftAura started in 2020 as a small homegrown brand. Today, it's known for its high-quality packaging and curated gifts that add a personal touch to every celebration.</p>
+    </div>
+  </div>
+  <!-- Footer Section -->
+  <section class="body1">
+    <footer class="footer">
+      <div class="footer-container">
+          <div class="footer-column">
+              <h3>CONTACT US</h3>
+              <p>‪+1 (844) 326-6005‬</p>
+              <a href="mailto:saad@gmail.com">saad@gmail.com</a>
+              <p>Mon-Fri 9am-3pm PT</p>
+              <p>Location: Your City, Country</p>
+          </div>
+          <div class="footer-column">
+              <h3>CUSTOMERS</h3>
+              <a href="#">Start a Return</a>
+              <a href="#">Return Policy</a>
+              <a href="#">FAQ</a>
+              <a href="#">Catalogs and Mailers</a>
+              <a href="#">Do Not Sell My Info</a>
+              <a href="#">About Group Gifting</a>
+          </div>
+          <div class="footer-column">
+              <h3>COMPANY</h3>
+              <a href="#">About Us</a>
+              <a href="#">Sustainability</a>
+              <a href="#">Discover Revive</a>
+              <a href="#">Careers</a>
+              <a href="#">Privacy Policy</a>
+              <a href="#">Terms</a>
+              <a href="#">Accessibility</a>
+          </div>
+          <div class="footer-column">
+              <h3>FOLLOW US</h3>
+              <div class="social-icons">
+                  <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+                  <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                  <a href="https://www.tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
+              </div>
+          </div>
+      </div>
+    </footer>
+</section>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
